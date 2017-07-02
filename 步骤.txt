@@ -1,50 +1,49 @@
 ﻿
 http://www.w3cplus.com/tools/grunt-tutorial-start-grunt.html:grunt�̳�
-http://www.cnblogs.com/beiz/p/5647780.html :grunt�̳�
+http://www.cnblogs.com/beiz/p/5647780.html :grunt
 
-����protractor 
+protractor 
 
 #grunt (Gruntfile.js,,,package.json)
-    //http://blog.csdn.net/u012577500/article/details/17321447  ��ª�ľ�̬������
-	��Ҫwatch��connect����Ȼ��ֻҪconnect���У����ǣ�������
-	����Ҫע��,connect��grunt���н���,����������,������Ҫ����watch
-        Gruntfile.js�ļ��Լ�����
-        package.js�ļ��Լ����� ���ߡ�����
-    1.����ֱ�Ӵ򿪵Ĳ���  ��������grunt��̬������ 
-    2.�ֶ�����package.json ��node.js�ն� npm install grunt --save-dev package�ļ����Լ����ö�Ӧ�Ĳ��
-    3.���ò����ʱ��  ����ȫ�� ����ֻ�������Ŀ��
-    4.Ҳ����package�ļ�ȫ��д�� ֱ��npm installֱ����������ļ��ϵĲ��
+    //http://blog.csdn.net/u012577500/article/details/17321447  //配置grunt静态文件
+	watch。。。connect必须要有watch connect
+        Gruntfile.js  自己配置
+        package.js
+    1.grunt 
+    2.package.json 基于node.js，打开node.js框进行配置  npm install grunt --save-dev package
+    3.
+    4.package  npm install
       
     
     5.protractorҲ�ǻ���node.js��
-http://blog.csdn.net/github_39212680/article/details/73410097  protractor����һ
-http://blog.csdn.net/wosishui21/article/details/38340527      protractor��ϸ����
-https://laod.cn/hosts/2016-google-hosts.html  //ipconfig /flushdns һֱ�ı�˿ں� �Ϳ��Է�ǽ   ��̫��
-����node.js �����ļ�ʱ�Լ�д��
+http://blog.csdn.net/github_39212680/article/details/73410097  protractor
+http://blog.csdn.net/wosishui21/article/details/38340527      protractor
+https://laod.cn/hosts/2016-google-hosts.html  //ipconfig /flushdns
+node.js
 
-#��װ�Ĳ��
+#
       5.1 protractor
 		npm install -g protractor
       5.2 karma-jasmine
  		npm install --save-dev karma-jasmine
-      5.3. webdriver-manager   //�������� ����jdk
+      5.3. webdriver-manager   //环境需要jdk
 		webdriver-manager update
       5.4. javaJDK
-                 //jdkҪ1.8��������
-   		 //�ܺõİ�װjdk������
-    		//�Ұ�װ·��C:\Program Files\Java\jdk1.7.0_79
+                 //jdkҪ1.8
+   		 //jdk
+    		//jdk路径 C:\Program Files\Java\jdk1.7.0_79
    		 http://blog.csdn.net/bingiser/article/details/53375282
 
 # �ļ�
-	1. spec.js �����ļ�
-	2. conf.js protractor�����ļ�
+	1. spec.js 测试文件
+	2. conf.js protractor 配置文件
 
-# ��������
-1. һ�������  ����������
+# 
+1. 第一条开启环境
 			webdriver-manager start
-2. �ڶ��������
+2. 第二条测试
 			protractor conf.js
-Ȼ������ָ��������� �������� �������˲���һ��
 
 //在执行测试文件的时候,如果有的页面有定时刷新,需要把定时刷新停了,才能测试; protractor会等待异步操作结束之后在执行./
 //如果有用$timeout做的定时刷新,那么protractor就会一直等待$timeout结束,导致超时;
+//if else 可以 但是都是对象
